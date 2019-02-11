@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="css/imgareaselect-default.css" /> -->
-  <link rel="stylesheet" type="text/css" href="css/imgareaselect/imgareaselect-animated.css" />
+  <link rel="stylesheet" type="text/css" href="css/imgareaselect-animated.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
     <div class="row">
       <div class="col-6">
-        <img src="./img1.jpg" id="photo" alt="" class="w-100" style="position: relative;" />
+        <img src="./img1.jpg" alt="" id="photo" class="w-100" style="position: relative; width:540px; height:300px;" />
       </div>
       <div class="col-6">
         <form>
@@ -45,20 +45,14 @@
       </div>
     </div>
 
-    <div class="row mt-3">
-      <div class="col-6">
-        <img src="./img1.jpg" id="photo-map" alt="" class="w-100" usemap="#map" />
-      </div>
-    </div>
+    <img alt="img" id="photo-map" data-bg_fill="rgba(244,124,67,0.5)" class="demo" src="./img1.jpg"  usemap="#map" style="display: block; width:540px; height:300px;">
+
 
     <map name="map" id="map">
-      <area id="area-1" class="map" alt="Si clías aquí irás a la portada" shape="rect" coords="0,0,60,50" href="#">
+      <area id="area-1" alt="Si clías aquí irás a la portada" shape="rect" coords="0,0,60,50" href="#"  class="harea tooltip" alt="Banskobystrický kraj" title="Banskobystrický kraj" data-img="" data-ref="">
     </map>
   </div>
-
-<!-- https://zara4.com/projects/crop-select-js/example-01 -->
 <!-- https://www.hazunaweb.com/curso-de-html/mapas-de-imagenes/ -->
-
   <!-- For JQuery -->
   <script src="assets/JQuery/jquery.min.js"></script>
 
@@ -66,6 +60,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/imgareaselect/jquery.imgareaselect.js"></script>
+  <script type="text/javascript" src="js/mapoid/mapoid.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

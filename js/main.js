@@ -12,7 +12,7 @@ $(document).ready(function(){
 
   $('#agregar').click(function(e){
     e.preventDefault();
-    var area = `<area class="map" alt="Si clías aquí irás a la portada" shape="rect" coords="${$('input[name="x1"]').val()},${$('input[name="y1"]').val()},${$('input[name="x2"]').val()},${$('input[name="y2"]').val()}" href="#">`
+    var area = `<area class="harea tooltip" alt="Banskobystrický kraj" title="Banskobystrický kraj" data-img="" data-ref=""  alt="Si clías aquí irás a la portada" shape="rect" coords="${$('input[name="x1"]').val()},${$('input[name="y1"]').val()},${$('input[name="x2"]').val()},${$('input[name="y2"]').val()}" href="#">`
     $('#map').append(area);
   });
 
@@ -20,8 +20,18 @@ $(document).ready(function(){
 });
 
 function ActualizarLink(){
-  $('#map').on('click', '.map', function(e){
-    e.preventDefault();
-    alert("hola");
-  });
+
+  $("#map").mapoid({
+   width : 540,
+   strokeColor: 'blue',
+   strokeWidth: 2,
+   fillColor: 'rgb(19, 84, 251)',
+   fillOpacity: 0.5,
+   selectedArea: true,
+   selectOnClick: false,
+   deselect: function(){alert('deselect')},
+    click: function(){alert('click')}});
+
+
+
 };
